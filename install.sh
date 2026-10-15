@@ -58,9 +58,10 @@ echo "--- 更新软件包列表 ---"
 opkg update
 echo ""
 
-# ---- 5. 安装 PassWall ----
-echo "--- 安装 luci-app-passwall ---"
-opkg install luci-app-passwall
+# ---- 5. 安装 PassWall2 ----
+echo "--- 安装 luci-app-passwall2 ---"
+# 注意：装 v2 不装 v1，v2 才支持 Hysteria2/TUIC/XHTTP/AnyTLS 等新协议
+opkg install luci-app-passwall2
 echo ""
 
 # ---- 6. 预装代理内核（MG1300 闪存充足） ----
@@ -75,5 +76,5 @@ done
 echo ""
 
 echo "=== 安装完成 ==="
-echo "在浏览器打开路由器管理页面，进入「服务」->「PassWall」进行配置。"
+echo "在浏览器打开路由器管理页面，进入「服务」->「PassWall2」进行配置。"
 echo "首次使用建议先更新分流规则与地理数据。"
